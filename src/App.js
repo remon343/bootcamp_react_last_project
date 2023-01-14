@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import About from "./components/About";
+import Featured from "./components/Featured";
+import Firehose from "./components/Firehose";
+import Footer from "./components/Footer";
+import HeroSection from "./components/HeroSection";
+import MainHeading from "./components/MainHeading";
+import Navbar from "./components/Navbar";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="pl-16 pr-16 pt-8">
+      <MainHeading/>
+      <hr className="mt-3"/>
+      <Navbar/>
+      <HeroSection/>
+      <div className="flex justify-between items-center gap-3">
+        <Featured/>
+        <Featured/>
+      </div>
+      <div className="flex mt-8 gap-9 pb-20">
+        <Firehose/>
+        <About/>
+  
+      </div>
+      <Footer/>
     </div>
   );
 }
